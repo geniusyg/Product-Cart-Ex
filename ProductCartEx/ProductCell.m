@@ -12,11 +12,20 @@
 @property (weak, nonatomic) IBOutlet UIImageView *productImage;
 @property (weak, nonatomic) IBOutlet UILabel *productName;
 @property (weak, nonatomic) IBOutlet UILabel *productPrice;
+@property (weak, nonatomic) IBOutlet UILabel *cartName;
+@property (weak, nonatomic) IBOutlet UILabel *quantityLabel;
+
 
 
 @end
 
 @implementation ProductCell
+- (IBAction)plus:(id)sender {
+	[self.delegate plusItem:self];
+}
+- (IBAction)minus:(id)sender {
+	[self.delegate minusItem:self];
+}
 
 - (void)setProductInfo:(Product *)item {
 	self.productName.text = item.name;
@@ -24,6 +33,12 @@
 	self.productPrice.text = item.price;
 	
 }
+
+- (void)setCart:(NSString *)name qu:(NSInteger)n {
+	self.cartName.text = name;
+	self.quantityLabel.text = [NSString stringWithFormat:@"%d",n];
+}
+
 
 - (IBAction)addCart:(id)sender {
 	[self.delegate addItem:self];
@@ -46,3 +61,33 @@
 }
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -13,6 +13,7 @@
 @interface ProductCell : UITableViewCell
 
 - (void)setProductInfo:(Product *)item;
+- (void)setCart:(NSString *)name qu:(NSInteger)n;
 
 @property (weak) id<CartDelegate> delegate;
 

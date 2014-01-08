@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>2013DA62-736D-45B6-8C71-9C1E52C70C58</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ProductCartEx</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>FE50476F-7A80-4071-AD7F-135438139BCE</key>
+		<string>https://github.com/geniusyg/Product-Cart-Ex.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ProductCartEx.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>FE50476F-7A80-4071-AD7F-135438139BCE</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/geniusyg/Product-Cart-Ex.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>FE50476F-7A80-4071-AD7F-135438139BCE</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FE50476F-7A80-4071-AD7F-135438139BCE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ProductCartEx</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -10,4 +10,6 @@
 
 @protocol CartDelegate <NSObject>
 - (void)addItem:(id)sender;
+- (void)plusItem:(id)sender;
+- (void)minusItem:(id)sender;
 @end

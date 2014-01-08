@@ -14,6 +14,8 @@
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource, CartDelegate> {
 	NSArray *data;
 	NSMutableArray *cart;
+	NSMutableArray *quan;
+	int pindex;
 }
 @property (weak, nonatomic) IBOutlet UITableView *table;
 
@@ -21,15 +23,74 @@
 
 @implementation ViewController
 
+
+- (void)plusItem:(id)sender {
+	UITableViewCell *cell = (UITableViewCell *)sender;
+	NSIndexPath *indexPath = [self.table indexPathForCell:cell];
+	
+	if(pindex==-1) {
+		pindex = indexPath.row;
+	}
+	
+	NSInteger n = [quan[pindex] integerValue];
+	[quan removeObjectAtIndex:pindex];
+	n++;
+	[quan insertObject:[NSNumber numberWithInt:n] atIndex:pindex];
+	
+	pindex = -1;
+	NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:1];
+	[self.table reloadSections:indexSet withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
+- (void)minusItem:(id)sender {
+	UITableViewCell *cell = (UITableViewCell *)sender;
+	NSIndexPath *indexPath = [self.table indexPathForCell:cell];
+	
+	NSInteger n = [quan[indexPath.row] integerValue];
+	
+	
+	
+	if(n==1) {
+		[cart removeObjectAtIndex:indexPath.row];
+		[quan removeObjectAtIndex:indexPath.row];
+		NSArray *rows = [NSArray arrayWithObject:indexPath];
+		[self.table deleteRowsAtIndexPaths:rows withRowAnimation:UITableViewRowAnimationAutomatic];
+		return;
+	}
+	[quan removeObjectAtIndex:indexPath.row];
+	n--;
+	[quan insertObject:[NSNumber numberWithInt:n] atIndex:indexPath.row];
+	
+	
+	NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:1];
+	[self.table reloadSections:indexSet withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
 - (void)addItem:(id)sender {
 	UITableViewCell *cell = (UITableViewCell *)sender;
 	NSIndexPath *indexPath = [self.table indexPathForCell:cell];
 	Product *item = data[indexPath.row];
+	int c = 0;
+	for(int i=0; i<[cart count]; i++) {
+		Product *tmp = cart[i];
+		if([item.name isEqualToString:tmp.name]) {
+			pindex = i;
+			c++;
+			break;
+		}
+	}
 	
-	[cart addObject:item];
+	if(c==0) {
 	
-	NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:1];
-	[self.table reloadSections:indexSet withRowAnimation:UITableViewRowAnimationAutomatic];
+		[cart addObject:item];
+		[quan addObject:[NSNumber numberWithInt:1]];
+	
+		NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:1];
+		[self.table reloadSections:indexSet withRowAnimation:UITableViewRowAnimationAutomatic];
+	} else {
+		[self plusItem:sender];
+	}
+	
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -55,10 +116,12 @@
 		
 		return cell;
 	} else {
-		UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CART_CELL"];
+		ProductCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CART_CELL"];
 		
 		Product *item = cart[indexPath.row];
-		cell.textLabel.text = item.name;
+		[cell setCart:item.name qu:[quan[indexPath.row] intValue]];
+		cell.delegate = self;
+		
 		return cell;
 	}
 }
@@ -75,6 +138,8 @@
 			 ];
 	
 	cart = [[NSMutableArray alloc] init];
+	quan =[[NSMutableArray alloc] init];
+	pindex = -1;
 	
 }
 
