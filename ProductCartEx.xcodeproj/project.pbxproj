@@ -21,6 +21,13 @@
 		002B080D187D06DD002DBCFB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 002B07EF187D06DD002DBCFB /* UIKit.framework */; };
 		002B0815187D06DD002DBCFB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 002B0813187D06DD002DBCFB /* InfoPlist.strings */; };
 		002B0817187D06DD002DBCFB /* ProductCartExTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 002B0816187D06DD002DBCFB /* ProductCartExTests.m */; };
+		002B0822187D06FD002DBCFB /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 002B0821187D06FD002DBCFB /* Product.m */; };
+		002B0828187D07BE002DBCFB /* ProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 002B0827187D07BE002DBCFB /* ProductCell.m */; };
+		002B086B187D1602002DBCFB /* cart.png in Resources */ = {isa = PBXBuildFile; fileRef = 002B086A187D1602002DBCFB /* cart.png */; };
+		002B086F187D1616002DBCFB /* ball1.png in Resources */ = {isa = PBXBuildFile; fileRef = 002B086C187D1616002DBCFB /* ball1.png */; };
+		002B0870187D1616002DBCFB /* ball2.png in Resources */ = {isa = PBXBuildFile; fileRef = 002B086D187D1616002DBCFB /* ball2.png */; };
+		002B0871187D1616002DBCFB /* ball3.png in Resources */ = {isa = PBXBuildFile; fileRef = 002B086E187D1616002DBCFB /* ball3.png */; };
+		002B0873187D161E002DBCFB /* 002.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 002B0872187D161E002DBCFB /* 002.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +60,16 @@
 		002B0812187D06DD002DBCFB /* ProductCartExTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ProductCartExTests-Info.plist"; sourceTree = "<group>"; };
 		002B0814187D06DD002DBCFB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		002B0816187D06DD002DBCFB /* ProductCartExTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductCartExTests.m; sourceTree = "<group>"; };
+		002B0820187D06FD002DBCFB /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
+		002B0821187D06FD002DBCFB /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
+		002B0826187D07BE002DBCFB /* ProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCell.h; sourceTree = "<group>"; };
+		002B0827187D07BE002DBCFB /* ProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCell.m; sourceTree = "<group>"; };
+		002B086A187D1602002DBCFB /* cart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cart.png; sourceTree = "<group>"; };
+		002B086C187D1616002DBCFB /* ball1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball1.png; sourceTree = "<group>"; };
+		002B086D187D1616002DBCFB /* ball2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball2.png; sourceTree = "<group>"; };
+		002B086E187D1616002DBCFB /* ball3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball3.png; sourceTree = "<group>"; };
+		002B0872187D161E002DBCFB /* 002.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 002.jpg; sourceTree = "<group>"; };
+		002B0874187D1803002DBCFB /* CartDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CartDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +129,11 @@
 		002B07F1187D06DD002DBCFB /* ProductCartEx */ = {
 			isa = PBXGroup;
 			children = (
+				002B0872187D161E002DBCFB /* 002.jpg */,
+				002B086C187D1616002DBCFB /* ball1.png */,
+				002B086D187D1616002DBCFB /* ball2.png */,
+				002B086E187D1616002DBCFB /* ball3.png */,
+				002B086A187D1602002DBCFB /* cart.png */,
 				002B07FA187D06DD002DBCFB /* AppDelegate.h */,
 				002B07FB187D06DD002DBCFB /* AppDelegate.m */,
 				002B07FD187D06DD002DBCFB /* Main.storyboard */,
@@ -119,6 +141,11 @@
 				002B0801187D06DD002DBCFB /* ViewController.m */,
 				002B0803187D06DD002DBCFB /* Images.xcassets */,
 				002B07F2187D06DD002DBCFB /* Supporting Files */,
+				002B0820187D06FD002DBCFB /* Product.h */,
+				002B0821187D06FD002DBCFB /* Product.m */,
+				002B0826187D07BE002DBCFB /* ProductCell.h */,
+				002B0827187D07BE002DBCFB /* ProductCell.m */,
+				002B0874187D1803002DBCFB /* CartDelegate.h */,
 			);
 			path = ProductCartEx;
 			sourceTree = "<group>";
@@ -228,7 +255,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				002B0873187D161E002DBCFB /* 002.jpg in Resources */,
 				002B0804187D06DD002DBCFB /* Images.xcassets in Resources */,
+				002B086F187D1616002DBCFB /* ball1.png in Resources */,
+				002B0871187D1616002DBCFB /* ball3.png in Resources */,
+				002B086B187D1602002DBCFB /* cart.png in Resources */,
+				002B0870187D1616002DBCFB /* ball2.png in Resources */,
 				002B07F6187D06DD002DBCFB /* InfoPlist.strings in Resources */,
 				002B07FF187D06DD002DBCFB /* Main.storyboard in Resources */,
 			);
@@ -250,8 +282,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				002B0802187D06DD002DBCFB /* ViewController.m in Sources */,
+				002B0822187D06FD002DBCFB /* Product.m in Sources */,
 				002B07FC187D06DD002DBCFB /* AppDelegate.m in Sources */,
 				002B07F8187D06DD002DBCFB /* main.m in Sources */,
+				002B0828187D07BE002DBCFB /* ProductCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +494,7 @@
 				002B081C187D06DD002DBCFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		002B081D187D06DD002DBCFB /* Build configuration list for PBXNativeTarget "ProductCartExTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +503,7 @@
 				002B081F187D06DD002DBCFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
